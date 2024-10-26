@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "filter"
+        "main"
+        "pages"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr 1fr;
+    min-height: 100vh;
+
+}
+
+/*ESTILOS PARA HEADER*/
+header {
+    grid-area: header;
+    background-color: #8dd3c7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+
+    padding-left: 0.5em;
+}
+
+.car-icon {
+    
+    font-size: 1.5em;
+}
+
+.hamburguer {
+    padding-right: 1em;
+    font-size: 1.5em;
+}
+
+header ul {
+    display: none;
+}
+
+/*ESTILOS PARA SELECT*/
+.filter {
+    grid-area: filter;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    gap: 0.5em;
+
+}
+
+.filter select {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*ESTILOS PARA MAIN*/
+main {
+    grid-area: main;
+    background-color: #efedfc;
+    display: flex;
+    align-items: center;
+
+}
+
+article {
+    border: 1px solid #c7c7c7;
+    margin: 0.5em 1em;
+    padding: 0.5em;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    overflow-y: scroll;
+
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+
+}
+
+.desktop {
+    display: none;
+}
+
+article button {
+    font-size: larger;
+    padding: 0.5em;
+    background-color: #b6dcff;
+    border-radius: 0.5em;
+}
+
+/*ESTILOS PARA NUMERACION DE PAGINAS*/
+
+.pages {
+    grid-area: pages;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pag {
+    padding: 1em;
+    border: 1px solid #d1d1d1;
+    height: 3em;
+}
+
+/*ESTILOS PARA FOOTER*/
+footer {
+    grid-area: footer;
+    background-color: #6ca39a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Vista Escritorio*/
+
+@media (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header filter"
+            "header main"
+            "footer pages";
+        grid-template-columns: 2fr 10fr;
+        grid-template-rows: 1fr 10fr 1fr;
+        height: 100vh;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: flex-start; 
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        list-style: none;
+        margin-top: 0.5em;
+        text-align: center;
+
+    }
+
+    header ul li {
+        justify-content: flex-start;
+    }
+
+    .hamburguer {
+        display: none;
+
+    }
+    
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        overflow-y: scroll;
+        height: 80vh;
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+    main article {
+        flex: 0 0 12em;
+        max-width: 12em;
+        margin:1em;
+    }
+
+    .pages {
+        display: flex;
+        align-items: center;
+    }
+
+}
