@@ -150,7 +150,7 @@ footer {
         grid-template-rows: 1fr 10fr 1fr;
         height: 100vh;
     }
-
+/*Dar estilo al header de versión escritorio*/
     header {
         display: flex;
         flex-direction: column;
@@ -177,14 +177,14 @@ footer {
         display: none;
 
     }
-    
+/*Dar estilos al main de veersión escritorio*/
     main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
         overflow-y: scroll;
-        height: 80vh;
+        height: 85vh;
     }
 
     .desktop {
@@ -196,7 +196,7 @@ footer {
         max-width: 12em;
         margin:1em;
     }
-
+/*Estilos para la numeración de páginas en versión escritorio*/
     .pages {
         display: flex;
         align-items: center;
