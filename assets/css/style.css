@@ -38,7 +38,7 @@ header h1 {
 }
 
 .car-icon {
-    
+    padding: 0.5em;
     font-size: 1.5em;
 }
 
@@ -61,6 +61,7 @@ header ul {
     flex-direction: column;
     font-size: large;
     gap: 0.5em;
+    padding: 0.5em;
 
 }
 
@@ -182,13 +183,25 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         overflow-y: scroll;
         height: 85vh;
     }
 
     .desktop {
+
+        border: 1px solid #c7c7c7;
+        margin: 0.5em 1em;
+        padding: 0.5em;
+        gap: 1em;   
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        overflow-y: scroll;
+        
+        
     }
 
     main article {
